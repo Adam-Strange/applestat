@@ -10,7 +10,7 @@ let proxyIP = '';// 小白勿动，该地址并不影响你的网速，这是给
 
 let sub = '';// 避免项目被滥用，现已取消内置订阅器
 let subconverter = 'SUBAPI.fxxk.dedyn.io';// clash订阅转换后端，目前使用CM的订阅转换功能。自带虚假uuid和host订阅。
-let subconfig = "https://raw.githubusercontent.com/Adam-Strange/config/main/ACL4SSR_Online_Full_CF.ini?token=GHSAT0AAAAAACWUL5DOLUWM6AT6GBTNZJCIZXIIJPQ"; //订阅配置文件
+let subconfig = "https://raw.githubusercontent.com/Adam-Strange/config/main/ACL4SSR_Online_Full_CF.ini"; //订阅配置文件
 let subProtocol = 'https';
 // The user name and password do not contain special characters
 // Setting the address will ignore proxyIP
@@ -1342,25 +1342,25 @@ async function getVLESSConfig(userID, hostName, sub, UA, RproxyIP, _url) {
 
 		return `
 ################################################################
-Subscribe / sub 订阅地址, 支持 Base64、clash-meta、sing-box 订阅格式
+Subscribe / sub  Base64、clash-meta、sing-box 
 ---------------------------------------------------------------
-快速自适应订阅地址:
+Subscribe link:
 https://${proxyhost}${hostName}/${userID}
 https://${proxyhost}${hostName}/${userID}?sub
 
-Base64订阅地址:
+Base64 link:
 https://${proxyhost}${hostName}/${userID}?b64
 https://${proxyhost}${hostName}/${userID}?base64
 
-clash订阅地址:
+clash link:
 https://${proxyhost}${hostName}/${userID}?clash
 
-singbox订阅地址:
+singbox link:
 https://${proxyhost}${hostName}/${userID}?sb
 https://${proxyhost}${hostName}/${userID}?singbox
 ---------------------------------------------------------------
 ################################################################
-${FileName} 配置信息
+${FileName} Config info
 ---------------------------------------------------------------
 HOST: ${hostName}
 UUID: ${userID}
@@ -1368,8 +1368,8 @@ FKID: ${fakeUserID}
 UA: ${UA}
 
 ${订阅器}
-SUBAPI（订阅转换后端）: ${subProtocol}://${subconverter}
-SUBCONFIG（订阅转换配置文件）: ${subconfig}
+SUBAPI: ${subProtocol}://${subconverter}
+SUBCONFIG: ${subconfig}
 ---------------------------------------------------------------
 ################################################################
 v2ray
@@ -1380,14 +1380,6 @@ ${v2ray}
 clash-meta
 ---------------------------------------------------------------
 ${clash}
----------------------------------------------------------------
-################################################################
-telegram 交流群 技术大佬~在线发牌!
-https://t.me/CMLiussss
----------------------------------------------------------------
-github 项目地址 Star!Star!Star!!!
-https://github.com/cmliu/edgetunnel
----------------------------------------------------------------
 ################################################################
 `;
 	} else {
